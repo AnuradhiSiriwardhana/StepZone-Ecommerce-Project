@@ -1,0 +1,3 @@
+[submodule "stepzone-frontend"]
+	path = stepzone-frontend
+	url = https://github.com/AnuradhiSiriwardhana/StepZone-Ecommerce-Project.git

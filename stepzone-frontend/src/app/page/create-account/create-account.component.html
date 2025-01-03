@@ -1,0 +1,57 @@
+<div class="flex justify-center mt-20">
+<div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="email" name="email" id="email" 
+            class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            placeholder=" " required />
+        <label for="email" 
+            class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Email Address</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="password" name="password" id="password" 
+            class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            placeholder=" " required />
+        <label for="password" 
+            class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Password</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="password" name="confirm_password" id="confirm_password" 
+            class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            placeholder=" " required />
+        <label for="confirm_password" 
+            class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Confirm Password</label>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-4">
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="first_name" id="first_name" 
+                class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                placeholder=" " required />
+            <label for="first_name" 
+                class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">First Name</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="last_name" id="last_name" 
+                class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                placeholder=" " required />
+            <label for="last_name" 
+                class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Last Name</label>
+        </div>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="address" id="address" 
+            class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            placeholder=" " pattern="^[#.0-9a-zA-Z\s,-]+$" required />
+        <label for="address" 
+            class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Address</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="tel" name="phone" id="phone" 
+            class="block py-3 px-4 w-full text-sm text-gray-900 bg-transparent border-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+            placeholder=" " pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}" required />
+        <label for="phone" 
+            class="absolute text-sm text-gray-500 bg-white px-1 left-3 top-[-10px] transform scale-90 transition-all duration-200">Phone Number</label>
+    </div>
+    <button routerLink="/home" type="submit" 
+     class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none">Submit</button>
+</div>
+</div>
