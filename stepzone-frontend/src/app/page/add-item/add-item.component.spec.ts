@@ -1,23 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { Item } from '../../model/Item';
 
-import { AddItemComponent } from './add-item.component';
+@Component({
+  selector: 'app-add-item',
+  standalone: true,
+  imports: [CommonModule, RouterLink, FormsModule,HttpClientModule],
+  templateUrl: './add-item.component.html',
+  styleUrls: ['./add-item.component.css']
+})
+export class AddItemComponent {
+  public item: Item = new Item(0, "", 0, "", 0); // Initialize item object with all required arguments
 
-describe('AddItemComponent', () => {
-  let component: AddItemComponent;
-  let fixture: ComponentFixture<AddItemComponent>;
+  constructor(private http: HttpClient) {}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AddItemComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(AddItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  addItem() {
+    this.http.post("http://localhost:8080/item/add", this.item).subscribe({
+      next: (res) => {
+        alert("Item Added!");
+      },
+      error: (err) => {
+        console.error("Error adding item:", err);
+        alert("Failed to add item.");
+      }
+    });
+  }
+}
